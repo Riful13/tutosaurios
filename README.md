@@ -46,6 +46,21 @@ bin/elasticsearch-reset-password -u elastic
 ```
 
 Ahora podemos acceder desde el navegador con el usuario **elastic** y la contraseña generada automáticamente.
+
+También podemos cambiar la contraseña por la que queramos con lo siguiente:
+
+1. Entramos al contenedor Docker de elastic search:
+
+```docker exec -it elasticsearch /bin/bash
+```
+
+2. Ejecutamos lo siguiente, cambiando los campos "current_password" y "your_new_password"
+3. 
+````curl -X POST "https://localhost:9200/_security/user/elastic/_password" -u elastic:current_password --insecure -H 'Content-Type: application/json' -d'
+{
+  "password": "your_new_password"
+}'
+```
 También podemos usar:
 
 `curl -u elastic:<password> -X GET "https://localhost:9200/" --insecure`
