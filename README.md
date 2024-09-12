@@ -55,7 +55,6 @@ También podemos cambiar la contraseña por la que queramos con lo siguiente:
 ```
 
 2. Ejecutamos lo siguiente, cambiando los campos "current_password" y "your_new_password"
-3. 
 ```curl -X POST "https://localhost:9200/_security/user/elastic/_password" -u elastic:current_password --insecure -H 'Content-Type: application/json' -d'
 {
   "password": "your_new_password"
