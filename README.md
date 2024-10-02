@@ -1,5 +1,4 @@
-# Instalación y Configuración para el Equipo de Trabajo
-
+# Instalación y Configuración
 ## Requisitos Previos
 
 - `sudo apt update`
